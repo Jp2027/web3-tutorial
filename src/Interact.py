@@ -11,11 +11,12 @@ chain_id = 31337
 connection= Web3(Web3.HTTPProvider(provider))
 
 contract_address , abi = deploy_contract(contract,'SimpleStorage',account, private_key,provider,chain_id)
+print(f"contract deployed at {contract_address}")
 
 simple_storage=connection.eth.contract(address=contract_address,abi=abi)
 nonce=connection.eth.get_transaction_count(account)
 
-transaction=simple_storage.functions.set(150032145).build_transaction(
+transaction=simple_storage.functions.set(5341).build_transaction(
         {
             "chainId":chain_id,
             "gasPrice":connection.eth.gas_price,
