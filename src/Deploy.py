@@ -39,8 +39,8 @@ def deploy_contract(contract_file:str,contract_name:str,account:str,private_key:
 
 if __name__=='__main__':
     contract="./src/SimpleStorage.sol"
-    account = os.getenv("ACCOUNT")
-    private_key = os.getenv("PRIVATE_KEY")
+    account = os.getenv("ANVIL_ACCOUNT")
+    private_key = os.getenv("ANVIL_PRIVATE_KEY")
     provider=os.getenv("LOCAL_PROVIDER")
     chain_id = 31337
     contract_address , abi = deploy_contract(contract,'SimpleStorage',account, private_key,provider,chain_id)

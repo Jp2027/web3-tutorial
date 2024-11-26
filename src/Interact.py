@@ -3,8 +3,8 @@ from Deploy import deploy_contract
 import os
 
 contract="./src/SimpleStorage.sol"
-account = os.getenv("ACCOUNT")
-private_key = os.getenv("PRIVATE_KEY")
+account = os.getenv("ANVIL_ACCOUNT")
+private_key = os.getenv("ANVIL_PRIVATE_KEY")
 provider=os.getenv("LOCAL_PROVIDER")
 chain_id = 31337
 
